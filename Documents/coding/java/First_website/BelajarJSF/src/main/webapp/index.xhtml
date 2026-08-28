@@ -4,21 +4,42 @@
       xmlns:h="jakarta.faces.html">
 <h:head>
     <title>Belajar JSF dan Bootstrap 5</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
-    <h1>Selamat Datang di JSF</h1>
+    <div class="container py-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1 class="text-primary">Belajar JSF</h1>
+                <p class="text-secondary">
+                    Halaman JSF pertama menggunakan Bootstrap 5.
+                </p>
 
-    <h:form>
-        <h:outputLabel for="nama" value="Masukkan nama: " />
-        <h:inputText id="nama" value="#{haloBean.nama}" />
+                <h:form>
+                    <div class="mb-3">
+                        <h:outputLabel for="nama"
+                                       value="Nama"
+                                       styleClass="form-label" />
 
-        <h:commandButton value="Tampilkan" />
+                        <h:inputText id="nama"
+                                     value="#{haloBean.nama}"
+                                     styleClass="form-control" />
+                    </div>
 
-        <br/><br/>
+                    <h:commandButton value="Tampilkan"
+                                     action="#{haloBean.tampilkan}"
+                                     styleClass="btn btn-primary" />
 
-        <h:outputText value="Halo, #{haloBean.nama}!"
-                      rendered="#{not empty haloBean.nama}" />
-    </h:form>
+                    <h:outputText value="#{haloBean.pesan}"
+                                  styleClass="d-block alert alert-success mt-3"
+                                  rendered="#{not empty haloBean.pesan}" />
+                </h:form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </h:body>
 </html>
