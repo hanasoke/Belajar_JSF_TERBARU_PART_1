@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>Belajar JSF dan Bootstrap 5</title>
+</h:head>
+
+<h:body>
+    <h1>Selamat Datang di JSF</h1>
+
+    <h:form>
+        <h:outputLabel for="nama" value="Masukkan nama: " />
+        <h:inputText id="nama" value="#{haloBean.nama}" />
+
+        <h:commandButton value="Tampilkan" />
+
+        <br/><br/>
+
+        <h:outputText value="Halo, #{haloBean.nama}!"
+                      rendered="#{not empty haloBean.nama}" />
+    </h:form>
+</h:body>
+</html>
