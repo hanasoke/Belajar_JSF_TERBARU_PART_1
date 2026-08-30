@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>Tentang Kami</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+              rel="stylesheet" />
+    </h:head>
+    <h:body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <h:link outcome="index"
+                        value="Belajar JSF"
+                        styleClass="navbar-brand" />
+
+                <div class="navbar-nav ms-auto">
+                    <h:link outcome="index"
+                            value="Halaman Utama"
+                            styleClass="nav-link" />
+
+                    <h:link outcome="tentang"
+                            value="Tentang"
+                            styleClass="nav-link active" />
+                </div>
+            </div>
+        </nav>
+
+        <!-- Konten halaman -->
+        <main class="container py-5">
+            <div class="row align-items-center g-5">
+
+                <!-- Gambar -->
+                <div class="col-md-6">
+                    <h:graphicImage library="images"
+                                    name="belajar.jpeg"
+                                    alt="Kegiatan belajar"
+                                    styleClass="img-fluid rounded shadow" />
+                </div>
+
+                <!-- Teks -->
+                <div class="col-md-6">
+                    <h1 class="fw-bold text-primary">
+                        Tentang Program Belajar
+                    </h1>
+
+                    <p class="lead">
+                        Kami menyediakan program bimbingan belajar untuk
+                        membantu siswa memahami pelajaran dengan lebih mudah.
+                    </p>
+
+                    <p class="text-secondary">
+                        Para siswa akan mendapatkan materi pembelajaran,
+                        latihan soal, serta pendampingan dari pengajar.
+                        Program ini dirancang agar kegiatan belajar menjadi
+                        lebih menyenangkan dan efektif.
+                    </p>
+
+                    <h:link outcome="index"
+                            value="Kembali ke Halaman Utama"
+                            styleClass="btn btn-primary mt-3 float-end" />
+                </div>
+
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </h:body>
+</html>
