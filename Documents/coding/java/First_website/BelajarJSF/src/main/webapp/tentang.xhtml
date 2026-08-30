@@ -5,8 +5,9 @@
     <h:head>
         <title>Tentang Kami</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-              rel="stylesheet" />
+        <h:outputStylesheet
+            library="bootstrap"
+            name="css/bootstrap.min.css" />
     </h:head>
     <h:body>
 
@@ -67,6 +68,8 @@
             </div>
         </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <h:outputScript 
+            library="bootstrap"
+            name="js/bootstrap.bundle.min.js"/>
     </h:body>
 </html>
