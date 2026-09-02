@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>Guru Bimbel</title>
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+        <h:outputStylesheet
+            library="bootstrap"
+            name="css/bootstrap.min.css" />
+        
+        <h:outputStylesheet
+            library="css"
+            name="guru_style.css" />
+    </h:head>
+    <h:body>
+         <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+
+                <h:link outcome="index"
+                        value="Belajar JSF"
+                        styleClass="navbar-brand fw-bold" />
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu"
+                        aria-expanded="false"
+                        aria-label="Buka navigasi">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <div class="navbar-nav ms-auto">
+
+                        <h:link outcome="index"
+                                value="Beranda"
+                                styleClass="nav-link" />
+
+                        <h:link outcome="tentang"
+                                value="Tentang"
+                                styleClass="nav-link" />
+
+                        <h:link outcome="program"
+                                value="Program"
+                                styleClass="nav-link" />
+
+                        <h:link outcome="guru"
+                                value="Guru"
+                                styleClass="nav-link active" />
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Judul halaman -->
+        <header class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1 class="display-5 fw-bold">
+                    Guru Bimbingan Belajar
+                </h1>
+
+                <p class="lead mb-0">
+                    Belajar bersama guru yang berpengalaman,
+                    ramah, dan siap membantu siswa meraih prestasi.
+                </p>
+            </div>
+        </header>
+
+        <!-- Daftar guru -->
+        <main class="container py-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <!-- Guru Bahasa Indonesia -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_bahasa_indonesia.png"
+                            alt="Guru Bahasa Indonesia"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-primary subject-badge">
+                                Bahasa Indonesia
+                            </span>
+
+                            <h2 class="card-title h4">Arif Budi Setiawan, S.Pd.</h2>
+
+                            <p class="teacher-description">
+                                Lulusan Pendidikan Bahasa dan Sastra Indonesia
+                                dengan pengalaman mengajar selama tujuh tahun.
+                                Pak Arif membantu siswa memahami tata bahasa,
+                                karya sastra, dan teknik menulis secara kreatif.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Bahasa Inggris -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_bahasa_inggris.png"
+                            alt="Guru Bahasa Inggris"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-success subject-badge">
+                                Bahasa Inggris
+                            </span>
+
+                            <h2 class="card-title h4">Mrs. Sinta Utami, S.Pd.</h2>
+
+                            <p class="teacher-description">
+                                Pengajar Bahasa Inggris yang berfokus pada
+                                grammar, vocabulary, speaking, dan reading.
+                                Mrs. Sinta menggunakan percakapan dan permainan
+                                edukatif agar pembelajaran lebih menyenangkan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Biologi -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_biologi.png"
+                            alt="Guru Biologi"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-success subject-badge">
+                                Biologi
+                            </span>
+
+                            <h2 class="card-title h4">Ibu Nadia Lestari, S.Si.</h2>
+
+                            <p class="teacher-description">
+                                Lulusan Biologi yang berpengalaman mengajarkan
+                                anatomi, ekosistem, genetika, dan ilmu kehidupan.
+                                Materi dijelaskan menggunakan ilustrasi serta
+                                contoh yang dekat dengan kehidupan sehari-hari.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Ekonomi -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_ekonomi.png"
+                            alt="Guru Ekonomi"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-warning subject-badge">
+                                Ekonomi
+                            </span>
+
+                            <h2 class="card-title h4">Ibu Ajeng Lestika Sari, S.E.</h2>
+
+                            <p class="teacher-description">
+                                Pengajar Ekonomi yang memahami bidang akuntansi,
+                                pasar, perbankan, dan kegiatan perekonomian.
+                                Ibu Ajeng menjelaskan konsep ekonomi melalui
+                                contoh sederhana yang mudah dipahami siswa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Fisika -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_fisika.png"
+                            alt="Guru Fisika"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-danger subject-badge">
+                                Fisika
+                            </span>
+
+                            <h2 class="card-title h4">Bapak Andi Saputra, S.Pd.</h2>
+
+                            <p class="teacher-description">
+                                Berpengalaman mengajar mekanika, listrik,
+                                gelombang, dan energi. Bapak Andi menggunakan
+                                eksperimen sederhana agar siswa memahami konsep
+                                fisika dan tidak hanya menghafalkan rumus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Geografi -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_geografi.png"
+                            alt="Guru Geografi"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-info subject-badge">
+                                Geografi
+                            </span>
+
+                            <h2 class="card-title h4">Bapak Bahrudin Umar, S.Pd.</h2>
+
+                            <p class="teacher-description">
+                                Pengajar Geografi yang mendalami lingkungan,
+                                kependudukan, pemetaan, dan fenomena alam.
+                                Bapak Bahrudin memanfaatkan peta dan studi kasus untuk
+                                membuat pembelajaran lebih menarik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Kimia -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_kimia.png"
+                            alt="Guru Kimia"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-secondary subject-badge">
+                                Kimia
+                            </span>
+
+                            <h2 class="card-title h4">Ibu Maya Putri, S.Si.</h2>
+
+                            <p class="teacher-description">
+                                Lulusan Kimia yang membantu siswa memahami atom,
+                                ikatan kimia, larutan, dan perhitungan kimia.
+                                Ibu Maya mengajarkan langkah penyelesaian soal
+                                secara runtut dan mudah diingat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Matematika -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_matematika.png"
+                            alt="Guru Matematika"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-primary subject-badge">
+                                Matematika
+                            </span>
+
+                            <h2 class="card-title h4">Bapak Fajar Nugroho, S.Pd.</h2>
+
+                            <p class="teacher-description">
+                                Pengajar Matematika yang berpengalaman dalam
+                                aljabar, geometri, statistika, dan kalkulus.
+                                Bapak Fajar memberikan cara cepat yang tetap
+                                disertai pemahaman konsep dasar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru PKN -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_pkn.png"
+                            alt="Guru Pendidikan Kewarganegaraan"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-danger subject-badge">
+                                PKN
+                            </span>
+
+                            <h2 class="card-title h4">Bapak Listyo Edi Prabowo, S.Pd.</h2>
+
+                            <p class="teacher-description">
+                                Pengajar Pendidikan Kewarganegaraan yang
+                                membahas Pancasila, konstitusi, hak warga negara,
+                                dan demokrasi. Pembelajaran dilakukan melalui
+                                diskusi serta contoh kehidupan bermasyarakat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru Sosiologi -->
+                <div class="col">
+                    <div class="card teacher-card shadow-sm">
+                        <h:graphicImage
+                            library="images"
+                            name="guru/guru_sosiologi.png"
+                            alt="Guru Sosiologi"
+                            styleClass="card-img-top teacher-photo" />
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-dark subject-badge">
+                                Sosiologi
+                            </span>
+
+                            <h2 class="card-title h4">Ibu Nurul Febriati, S.Sos.</h2>
+
+                            <p class="teacher-description">
+                                Lulusan Sosiologi yang berpengalaman membahas
+                                interaksi sosial, perubahan sosial, konflik, dan
+                                masyarakat. Ibu Nurul menghubungkan teori dengan
+                                peristiwa yang terjadi di sekitar siswa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-4 mt-4">
+            <div class="container">
+                <p class="mb-3">
+                    Bersama guru terbaik, belajar menjadi lebih mudah.
+                </p>
+
+                <h:link outcome="index"
+                        value="Kembali ke Halaman Utama"
+                        styleClass="btn btn-outline-light" />
+            </div>
+        </footer>
+        
+        <h:outputScript 
+            library="bootstrap"
+            name="js/bootstrap.bundle.min.js"/>
+    </h:body>
+</html>

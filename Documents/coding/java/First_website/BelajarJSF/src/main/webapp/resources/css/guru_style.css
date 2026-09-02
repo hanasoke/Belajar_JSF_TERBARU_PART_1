@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+/* 
+    Created on : Sep 2, 2026, 4:54:16 PM
+    Author     : hanasbp
+*/
+
+body {
+    background-color: #f8f9fa;
+}
+
+.teacher-card {
+    height: 100%;
+    overflow: hidden;
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.teacher-photo {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.subject-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.teacher-description {
+    color: #6c757d;
+    line-height: 1.7;
+}
