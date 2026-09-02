@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>Program Belajar</title>
+        
+        <h:outputStylesheet
+            library="bootstrap"
+            name="css/bootstrap.min.css" />
+        
+        <h:outputStylesheet
+            library="css"
+            name="style.css" />
+    </h:head>
+    <h:body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+
+                <h:link outcome="index"
+                        value="Belajar JSF"
+                        styleClass="navbar-brand fw-bold" />
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu"
+                        aria-expanded="false"
+                        aria-label="Buka navigasi">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <div class="navbar-nav ms-auto">
+
+                        <h:link outcome="index"
+                                value="Halaman Utama"
+                                styleClass="nav-link" />
+
+                        <h:link outcome="tentang"
+                                value="Tentang"
+                                styleClass="nav-link" />
+
+                        <h:link outcome="program"
+                                value="Program"
+                                styleClass="nav-link active" />
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Carousel Jumbotron -->
+        <div id="programCarousel"
+             class="carousel slide carousel-fade"
+             data-bs-ride="carousel">
+
+            <!-- Indikator slide -->
+            <div class="carousel-indicators">
+                <button type="button"
+                        data-bs-target="#programCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide pertama">
+                </button>
+
+                <button type="button"
+                        data-bs-target="#programCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide kedua">
+                </button>
+
+                <button type="button"
+                        data-bs-target="#programCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide ketiga">
+                </button>
+            </div>
+
+            <!-- Isi carousel -->
+            <div class="carousel-inner">
+
+                <!-- Slide pertama -->
+                <div class="carousel-item active"
+                     data-bs-interval="5000">
+
+                    <div class="hero-slide">
+                        <h:graphicImage library="images"
+                                        name="ai_education.jpeg"
+                                        alt="Program belajar bersama" />
+
+                        <div class="hero-content">
+                            <h1>Belajar Bersama Pengajar Terbaik</h1>
+
+                            <p class="lead">
+                                Pahami materi sekolah dengan metode belajar
+                                yang mudah, nyaman, dan menyenangkan.
+                            </p>
+
+                            <h:link outcome="tentang"
+                                    value="Pelajari Selengkapnya"
+                                    styleClass="btn btn-primary btn-lg mt-3" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide kedua -->
+                <div class="carousel-item"
+                     data-bs-interval="5000">
+
+                    <div class="hero-slide">
+                        <h:graphicImage library="images"
+                                        name="ai_kids.jpeg"
+                                        alt="Latihan soal untuk siswa" />
+
+                        <div class="hero-content">
+                            <h1>Latihan Soal yang Lengkap</h1>
+
+                            <p class="lead">
+                                Tingkatkan kemampuan melalui latihan soal,
+                                pembahasan, dan evaluasi secara berkala.
+                            </p>
+
+                            <a href="#daftar-program"
+                               class="btn btn-warning btn-lg mt-3">
+                                Lihat Program
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide ketiga -->
+                <div class="carousel-item"
+                     data-bs-interval="5000">
+
+                    <div class="hero-slide">
+                        <h:graphicImage library="images"
+                                        name="belajar.jpeg"
+                                        alt="Pendampingan belajar siswa" />
+
+                        <div class="hero-content">
+                            <h1>Raih Prestasi Terbaikmu</h1>
+
+                            <p class="lead">
+                                Dapatkan pendampingan belajar untuk membantu
+                                mencapai nilai dan cita-cita terbaikmu.
+                            </p>
+
+                            <h:link outcome="index"
+                                    value="Mulai Belajar"
+                                    styleClass="btn btn-success btn-lg mt-3" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tombol sebelumnya -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#programCarousel"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"
+                      aria-hidden="true">
+                </span>
+
+                <span class="visually-hidden">Sebelumnya</span>
+            </button>
+
+            <!-- Tombol berikutnya -->
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#programCarousel"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"
+                      aria-hidden="true">
+                </span>
+
+                <span class="visually-hidden">Berikutnya</span>
+            </button>
+        </div>
+
+        <!-- Konten tambahan -->
+        <section id="daftar-program" class="container py-5">
+            <div class="text-center">
+                <h2 class="fw-bold text-primary">Program Pilihan</h2>
+
+                <p class="text-secondary">
+                    Pilih program belajar yang sesuai dengan kebutuhanmu.
+                </p>
+
+                <h:link outcome="index"
+                        value="Kembali ke Halaman Utama"
+                        styleClass="btn btn-outline-primary" />
+            </div>
+        </section>
+        
+         <h:outputScript 
+            library="bootstrap"
+            name="js/bootstrap.bundle.min.js"/>
+
+    </h:body>
+</html>
