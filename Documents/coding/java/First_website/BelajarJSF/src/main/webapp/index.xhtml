@@ -15,28 +15,41 @@
         <div class="container">
             <h:link outcome="index"
                     value="Belajar JSF"
-                    styleClass="navbar-brand" />
+                    styleClass="navbar-brand fw-bold" />
+            
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Buka navigasi">
 
-            <div class="navbar-nav ms-auto">
-                <h:link outcome="index"
-                        value="Halaman Utama"
-                        styleClass="nav-link active" />
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="navbar-nav ms-auto">
+                    <h:link outcome="index"
+                            value="Halaman Utama"
+                            styleClass="nav-link active" />
 
-                <h:link outcome="tentang"
-                        value="Tentang Bimbel"
-                        styleClass="nav-link" />
-                
-                <h:link outcome="about"
-                            value="About Me"
+                    <h:link outcome="tentang"
+                            value="Tentang Bimbel"
                             styleClass="nav-link" />
-                
-                <h:link outcome="program"
-                                value="Program"
+
+                    <h:link outcome="about"
+                                value="About Me"
                                 styleClass="nav-link" />
-                
-                <h:link outcome="guru"
-                                value="Guru"
-                                styleClass="nav-link" />
+
+                    <h:link outcome="program"
+                                    value="Program"
+                                    styleClass="nav-link" />
+
+                    <h:link outcome="guru"
+                                    value="Guru"
+                                    styleClass="nav-link" />
+                </div>
             </div>
         </div>
     </nav>
